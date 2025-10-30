@@ -15,6 +15,7 @@ public class PauseScript : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        pauseAudio = GameObject.Find("PauseAudio").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

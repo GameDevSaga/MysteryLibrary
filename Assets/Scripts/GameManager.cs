@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     public float transitionTime;
     public float fadeTime;
     public MusicPlayerScript musicPlayer;
+    public GameObject effects;
+    public GameObject smoke1;
+    public GameObject smoke2;
+    public GameObject smoke3;
+    public GameObject smoke4;
 
     public GameObject currentButton;
     public GameObject currentImage;
@@ -75,6 +80,7 @@ public class GameManager : MonoBehaviour
         {
             musicPlayer.PlayTrackWithFade(0); // Back to normal music
             wasInFirstBook = false;
+            effects.SetActive(true);
         }
 
         // Same for Book 2
@@ -87,6 +93,7 @@ public class GameManager : MonoBehaviour
         {
             musicPlayer.PlayTrackWithFade(0);
             wasInSecondBook = false;
+            effects.SetActive(true);
         }
 
         // Same for Book 3
@@ -99,6 +106,7 @@ public class GameManager : MonoBehaviour
         {
             musicPlayer.PlayTrackWithFade(0);
             wasInThirdBook = false;
+            effects.SetActive(true);
         }
 
         // Same for Book 4
@@ -111,6 +119,7 @@ public class GameManager : MonoBehaviour
         {
             musicPlayer.PlayTrackWithFade(0);
             wasInFourthBook = false;
+            effects.SetActive(true);
         }
     }
 
@@ -120,6 +129,8 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator FirstShelf()
     {
+        smoke1.SetActive(false);
+        effects.SetActive(false);
         fadeScreen.SetTrigger("TransitionFade");
         yield return new WaitForSeconds(transitionTime);
         bookShelf.SetActive(true);
@@ -150,6 +161,8 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator SecondShelf()
     {
+        smoke2.SetActive(false);
+        effects.SetActive(false);
         fadeScreen.SetTrigger("TransitionFade");
         yield return new WaitForSeconds(transitionTime);
         bookShelf.SetActive(true);
@@ -182,6 +195,8 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator ThirdShelf()
     {
+        smoke3.SetActive(false);
+        effects.SetActive(false);
         fadeScreen.SetTrigger("TransitionFade");
         yield return new WaitForSeconds(transitionTime);
         bookShelf.SetActive(true);
@@ -214,6 +229,8 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator FourthShelf()
     {
+        smoke4.SetActive(false);
+        effects.SetActive(false);
         fadeScreen.SetTrigger("TransitionFade");
         yield return new WaitForSeconds(transitionTime);
         bookShelf.SetActive(true);
