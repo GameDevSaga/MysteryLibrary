@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public PauseScript pause;
     public Animator fadeScreen;
     public float transitionTime;
+    public float fadeTime;
     public MusicPlayerScript musicPlayer;
 
     public GameObject currentButton;
@@ -115,6 +116,12 @@ public class GameManager : MonoBehaviour
 
     public void BookShelf()
     {
+        StartCoroutine(FirstShelf());
+    }
+    public IEnumerator FirstShelf()
+    {
+        fadeScreen.SetTrigger("TransitionFade");
+        yield return new WaitForSeconds(transitionTime);
         bookShelf.SetActive(true);
         bookShelfdiag.TriggerDialogue();
         bookShelf1Button.SetActive(false);
@@ -122,7 +129,14 @@ public class GameManager : MonoBehaviour
     }
     public void Book1()
     {
+        StartCoroutine(FirstBook());
+    }
+
+    public IEnumerator FirstBook()
+    {
         inFirstBook = true;
+        fadeScreen.SetTrigger("TransitionFade");
+        yield return new WaitForSeconds(transitionTime);
         book1.SetActive(true);
         bookShelf.SetActive(false);
         book1diag.TriggerDialogue();
@@ -132,6 +146,12 @@ public class GameManager : MonoBehaviour
 
     public void BookShelf2()
     {
+        StartCoroutine(SecondShelf());
+    }
+    public IEnumerator SecondShelf()
+    {
+        fadeScreen.SetTrigger("TransitionFade");
+        yield return new WaitForSeconds(transitionTime);
         bookShelf.SetActive(true);
         bookShelfdiag.TriggerDialogue();
         bookShelf2Button.SetActive(false);
@@ -141,7 +161,14 @@ public class GameManager : MonoBehaviour
 
     public void Book2()
     {
+        StartCoroutine(SecondBook());
+    }
+
+    public IEnumerator SecondBook()
+    {
         inSecondBook = true;
+        fadeScreen.SetTrigger("TransitionFade");
+        yield return new WaitForSeconds(transitionTime);
         book2.SetActive(true);
         bookShelf.SetActive(false);
         book2diag.TriggerDialogue();
@@ -151,6 +178,12 @@ public class GameManager : MonoBehaviour
 
     public void BookShelf3()
     {
+        StartCoroutine(ThirdShelf());
+    }
+    public IEnumerator ThirdShelf()
+    {
+        fadeScreen.SetTrigger("TransitionFade");
+        yield return new WaitForSeconds(transitionTime);
         bookShelf.SetActive(true);
         bookShelfdiag.TriggerDialogue();
         bookShelf3Button.SetActive(false);
@@ -160,7 +193,14 @@ public class GameManager : MonoBehaviour
 
     public void Book3()
     {
+        StartCoroutine(ThirdBook());
+    }
+
+    public IEnumerator ThirdBook()
+    {
         inThirdBook = true;
+        fadeScreen.SetTrigger("TransitionFade");
+        yield return new WaitForSeconds(transitionTime);
         book3.SetActive(true);
         bookShelf.SetActive(false);
         book3diag.TriggerDialogue();
@@ -170,6 +210,12 @@ public class GameManager : MonoBehaviour
 
     public void BookShelf4()
     {
+        StartCoroutine(FourthShelf());
+    }
+    public IEnumerator FourthShelf()
+    {
+        fadeScreen.SetTrigger("TransitionFade");
+        yield return new WaitForSeconds(transitionTime);
         bookShelf.SetActive(true);
         bookShelfdiag.TriggerDialogue();
         bookShelf4Button.SetActive(false);
@@ -178,7 +224,14 @@ public class GameManager : MonoBehaviour
     }
     public void Book4()
     {
+        StartCoroutine(FourthBook());
+    }
+
+    public IEnumerator FourthBook()
+    {
         inFourthBook = true;
+        fadeScreen.SetTrigger("TransitionFade");
+        yield return new WaitForSeconds(transitionTime);
         book4.SetActive(true);
         bookShelf.SetActive(false);
         book4diag.TriggerDialogue();
@@ -219,7 +272,7 @@ public class GameManager : MonoBehaviour
     {
         pause.paused = false;
         fadeScreen.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSeconds(fadeTime);
         SceneManager.LoadScene(levelToLoad);
     }
 

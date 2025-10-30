@@ -14,6 +14,9 @@ public class DialogueScript : MonoBehaviour
     public PauseScript pause;
     public GameManager myGM;
 
+    public Animator fadeScreen;
+    public float transitionTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +66,13 @@ public class DialogueScript : MonoBehaviour
 
     void EndDialogue()
     {
+        StartCoroutine(DialogueEnd());
+    }
+    public IEnumerator DialogueEnd()
+    {
         //pause.paused = false;
+        fadeScreen.SetTrigger("TransitionFade");
+        yield return new WaitForSeconds(transitionTime);
         myAnim.SetBool("isOpen", false);
         myGM.currentButton.SetActive(true);
         myGM.currentImage.SetActive(false);

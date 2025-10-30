@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 252332451}
   - component: {fileID: 252332450}
   - component: {fileID: 252332449}
+  - component: {fileID: 252332452}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -255,6 +256,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252332447}
   m_CullTransparentMesh: 1
+--- !u!114 &252332452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252332447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1746124363}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &481026487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1047,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeScreen: {fileID: 1275599028}
   transitionTime: 2
+--- !u!82 &1746124363 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4770164842943010396, guid: 69c62dd6b10eb414b96e9ade48d01f45, type: 3}
+  m_PrefabInstance: {fileID: 964122977882197402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1746509157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1064,7 @@ GameObject:
   - component: {fileID: 1746509161}
   - component: {fileID: 1746509160}
   - component: {fileID: 1746509159}
+  - component: {fileID: 1746509162}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1150,6 +1186,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746509157}
   m_CullTransparentMesh: 1
+--- !u!114 &1746509162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746509157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1746124363}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2000678854}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1811299846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,6 +1303,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811299846}
   m_CullTransparentMesh: 1
+--- !u!82 &2000678854 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7932900332538059110, guid: 69c62dd6b10eb414b96e9ade48d01f45, type: 3}
+  m_PrefabInstance: {fileID: 964122977882197402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &964122977882197402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1273,10 +1359,6 @@ PrefabInstance:
     - target: {fileID: 4749500309202723805, guid: 69c62dd6b10eb414b96e9ade48d01f45, type: 3}
       propertyPath: m_Name
       value: Jukebox
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774746722532386495, guid: 69c62dd6b10eb414b96e9ade48d01f45, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
