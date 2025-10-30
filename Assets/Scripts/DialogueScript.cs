@@ -6,7 +6,7 @@ using TMPro;
 
 public class DialogueScript : MonoBehaviour
 {
-    public TextMeshProUGUI nameText;
+    //public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
     public float typingSpeed;
@@ -25,7 +25,7 @@ public class DialogueScript : MonoBehaviour
         //pause.paused = true;
         myAnim.SetBool("isOpen", true);
 
-        nameText.text = dialogue.name;
+        //nameText.text = dialogue.name;
 
         sentences.Clear();
 

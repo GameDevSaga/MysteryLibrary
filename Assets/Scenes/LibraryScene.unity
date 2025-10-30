@@ -15302,7 +15302,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Book 2
     sentences:
     - This is another story
     - The End
@@ -15530,10 +15529,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Bookshelf
     sentences:
-    - This is the shelf where the magic is coming from. Perhaps if you find the right
-      book, you can fix things.
+    - This seems to be the shelf where the magic is coming from. Perhaps if you find
+      the right book, you can fix things.
 --- !u!114 &632436880 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8981095636498792800, guid: 69c62dd6b10eb414b96e9ade48d01f45, type: 3}
@@ -25893,10 +25891,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Mysterious Library
     sentences:
-    - You enter the library, and the door closes behind you.
-    - Mysterious magics seem to be leaking out of the books and blocking your way.
+    - 'You enter the library, and the door closes behind you.
+
+      Mysterious magics
+      seem to be leaking out of the books and blocking your way.'
     - You should examine the books and see if you can fix this.
 --- !u!1 &887693441
 GameObject:
@@ -26413,7 +26412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Book 1
     sentences:
     - Once Upon A Time...
     - In a kingdom far, far away...
@@ -26863,7 +26861,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Book 3
     sentences:
     - Looks like a sci fi book
     - The End
@@ -36726,9 +36723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6100382df4c622a4387404fcef9cf866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 1913729564}
   dialogueText: {fileID: 1913729563}
-  typingSpeed: 0.03
+  typingSpeed: 0.012
   myAnim: {fileID: 1913729562}
   pause: {fileID: 519420034}
   myGM: {fileID: 1809292835}
@@ -42117,9 +42113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Book 4
     sentences:
-    - A romance
+    - A mystery book
     - The End
 --- !u!1001 &1913729560
 PrefabInstance:
@@ -42137,6 +42132,22 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 2100164363200429113, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
+      propertyPath: m_Color.a
+      value: 0.2627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100164363200429113, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
+      propertyPath: m_Color.b
+      value: 0.61489856
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100164363200429113, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8104542
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100164363200429113, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9245283
+      objectReference: {fileID: 0}
     - target: {fileID: 2397457939737280387, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -42157,6 +42168,22 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5665040570739042052, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1750
+      objectReference: {fileID: 0}
+    - target: {fileID: 5848920872112329139, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006354499566648939, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404088401487241885, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 803
+      objectReference: {fileID: 0}
     - target: {fileID: 6679129615092710236, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_Name
       value: DialogueBox
@@ -42187,7 +42214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622961016265680854, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622961016265680854, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_AnchorMin.x
@@ -42195,11 +42222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622961016265680854, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622961016265680854, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 1800
       objectReference: {fileID: 0}
     - target: {fileID: 8622961016265680854, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_SizeDelta.y
@@ -42235,11 +42262,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622961016265680854, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 640
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622961016265680854, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -701
+      value: -163
       objectReference: {fileID: 0}
     - target: {fileID: 8622961016265680854, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -42271,17 +42298,6 @@ Animator:
 --- !u!114 &1913729563 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2440689642111019764, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
-  m_PrefabInstance: {fileID: 1913729560}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1913729564 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 405294496020236189, guid: 192b79d9d1f5a8448a1ed26bdef1adab, type: 3}
   m_PrefabInstance: {fileID: 1913729560}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
