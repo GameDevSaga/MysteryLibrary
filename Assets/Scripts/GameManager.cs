@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     private bool wasInThirdBook = false;
     private bool wasInFourthBook = false;
 
- 
+    public GameObject endButton;
 
     // Start is called before the first frame update
     void Start()
@@ -220,7 +220,7 @@ public class GameManager : MonoBehaviour
         bookShelf.SetActive(false);
         book3diag.TriggerDialogue();
         book3Button.SetActive(false);
-        currentButton = bookShelf4Button;
+        currentButton = endButton;
     }
 
     public void BookShelf4()
@@ -253,6 +253,7 @@ public class GameManager : MonoBehaviour
         bookShelf.SetActive(false);
         book4diag.TriggerDialogue();
         book4Button.SetActive(false);
+        currentButton = endButton;
     }
 
     public void MenuLevel()
